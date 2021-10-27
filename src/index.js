@@ -1,20 +1,31 @@
 import cipher from './cipher.js';
+console.log(cipher)
 
-console.log(cipher);
+let buttonCode = document.getElementById("codeButton");
+let textCode = document.getElementById("codeResult");
+let offset = document.getElementById("offset");
+let text;
+
+buttonCode.addEventListener("click", function() {
+     text = document.getElementById("sentenceOne").value;
+     let result = cipher.encode(text, parseInt(offset.value));
+     textCode.value = result;
+}); 
 
 
-let selectorNumero = document.createElement("select");
-let numero=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26];
-let option=[];
-let textoOption=[];
-for(let i=0;i<=25;i++){
-      option[i]=document.createElement("option");
-      option[i].setAttribute("value", "value"+(i+1));
-     textoOption[i+1] = document.createTextNode(numero[i]);
-      option[i].appendChild( textoOption[i+1]);
-      selectorNumero.appendChild(option[i]);
-      console.log(textoOption[i])
-}
-     document.body.appendChild(selectorNumero)
-     selectorNumero.setAttribute('class','selectorNumero')
+let buttonDecode = document.getElementById("decodeButton");
+let textDecode = document.getElementById("decodeResult");
+let offset1 = document.getElementById("offset1");
+let text2;
+
+buttonDecode.addEventListener("click", function() {
+    text2 = document.getElementById("sentenceTwo").value;
+    let resultTwo = cipher.decode(text2, parseInt(offset1.value))
+    textDecode.value = resultTwo;    
+})
+
+
+     
+
+
 

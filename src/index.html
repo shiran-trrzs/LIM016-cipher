@@ -20,12 +20,18 @@
     <p>Abecedario: ABCDEFGHIJKLMNOPQRSTUVWXYZ</p> 
     <p>Cifrado con clave 1: BCDEFGHIJKLMNOPQRSTUVWXYZA</p>
     
-    <p>Texto a cifrar</p> <br>
-    <input type="text" id="texto">
-    <p>Clave</p> 
-    <input type="button" value="Cifrar">
+    <p class="contentCifrar">Texto a cifrar</p>
+    <input type="text" id="sentenceOne" >
+    <p>Clave</p> <input type="number" id="offset" min="0">
+    <input type="button" value="Cifrar" id="codeButton">
+    <input type="text" id="codeResult">
 
-
+    <p class="contentDescifrar">Texto a descifrar</p>
+    <input type="text" id="sentenceTwo">
+    <p>Clave</p> <input type="number" id= "offset1" min="0">
+    <input type="button" value="Descifrar" id="decodeButton">
+    <input type="text" id="decodeResult">
+    
 
     <script src="index.js" type="module"></script>
   </body>
