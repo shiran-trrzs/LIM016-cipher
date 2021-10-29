@@ -1,21 +1,21 @@
 const cipher = {
-  encode: function (text, number) {
+  encode: function (number, text) {
+    
     let resultEncode = [];
     let letter;
-    
+
     for (let i = 0; i < text.length; i++) {
       letter = text.charCodeAt(i);
       if (letter >=65 && letter <=90) {
         let formula = (((letter - 65) + number) % 26 + 65);
-        console.log(formula)
         resultEncode.push(String.fromCharCode(formula))
-        console.log((String.fromCharCode(formula)))
       }
     }
+
     let result = resultEncode.join('');
     return result
   },
-  decode: function (text, number) {
+  decode: function (number, text) {
     let resultDecode = [];
     let letterTwo;
 

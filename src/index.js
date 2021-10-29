@@ -8,7 +8,7 @@ let text;
 
 buttonCode.addEventListener("click", function() {
      text = document.getElementById("sentenceOne").value;
-     let result = cipher.encode(text, parseInt(offset.value));
+     let result = cipher.encode(parseInt(offset.value), text);
      textCode.value = result;
 }); 
 
@@ -20,7 +20,7 @@ let text2;
 
 buttonDecode.addEventListener("click", function() {
     text2 = document.getElementById("sentenceTwo").value;
-    let resultTwo = cipher.decode(text2, parseInt(offset1.value))
+    let resultTwo = cipher.decode(parseInt(offset1.value), text2)
     textDecode.value = resultTwo;    
 })
 
