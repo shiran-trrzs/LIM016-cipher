@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Caesar Cipher</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root">
+      <h1> CRIPTOGRAMA - CIFRADO CÉSAR </h1>
+    </div>
+    <p> ¡Hola! Aquí podrás escribir tu mensaje, elegir una clave y crear tu texto cifrado</p>
+    <p style="color:red">
+      OJO: La clave define la cantidad de espacios que se desplazará cada letra para poder ser reemplazada</p>
+    <p>En este ejemplo la «clave» es 1 porque hemos desplazado 1 posición:
+
+    <p>Abecedario: ABCDEFGHIJKLMNOPQRSTUVWXYZ</p> 
+    <p>Cifrado con clave 1: BCDEFGHIJKLMNOPQRSTUVWXYZA</p>
+    
+    <p class="contentCifrar">Texto a cifrar</p>
+    <input type="text" id="sentenceOne" >
+    <p>Clave</p> <input type="number" id="offset" min="0">
+    <input type="button" value="Cifrar" id="codeButton">
+    <input type="text" id="codeResult">
+
+    <p class="contentDescifrar">Texto a descifrar</p>
+    <input type="text" id="sentenceTwo">
+    <p>Clave</p> <input type="number" id= "offset1" min="0">
+    <input type="button" value="Descifrar" id="decodeButton">
+    <input type="text" id="decodeResult">
+    
+
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
